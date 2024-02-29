@@ -23,7 +23,7 @@ app.get('/api/students', (req, res) => {
     res.status(200).send(students)
     }
     catch (error){
-        rollbar.error("This is to catch an error")
+        rollbar.log("This is to catch an error")
         res.status(500).send("Internal server error")
     }
 })
